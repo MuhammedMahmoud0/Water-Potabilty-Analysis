@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Models</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #007bff, #6610f2);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        main {
+            padding: 3rem;
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        .button{
+            display: inline-block;
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background: #0056b3;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            background: #fff;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin: 0 0 1.5rem;
+            color: #212529;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        table th, table td {
+            border: 1px solid #dee2e6;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        table a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        table a:hover {
+            color: #0056b3;
+        }
+
+        footer {
+            background: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Machine Learning Models Overview</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Models List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Model Name</th>
+                        <th>Accuracy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="/logistic_regression">Logistic Regression</a></td>
+                        <td>{{ accuracies["logistic_regression"] }}%</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/knn">K-Nearest-Neighbor</a></td>
+                        <td>{{ accuracies["knn"] }}%</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/naive_bayes">Naive Bayes</a></td>
+                        <td>{{ accuracies["naive_bayes"] }}%</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/svm">Support Vector Machine</a></td>
+                        <td>{{ accuracies["svm"] }}%</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/decision_tree">Decision Tree</a></td>
+                        <td>{{ accuracies["decision_tree"] }}%</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/random_forest">Random Forest</a></td>
+                        <td>{{ accuracies["random_forest"] }}%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <a href="/model_comparison" class="button">Go to Comparison</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Machine Learning Dashboard</p>
+    </footer>
+</body>
+</html>
